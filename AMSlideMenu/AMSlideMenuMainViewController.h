@@ -207,6 +207,13 @@ typedef enum {
 - (BOOL)deepnessForRightMenu;
 
 /**
+ * Override this method if you want to set custom color to the overlay on content vc while left menu is opening
+ * Default value is black color
+ * @return UIColor
+ */
+- (UIColor *)colorForDarknessOverlayWhileLeftMenu;
+
+/**
  * Override this method if you want to enable or disable darkness effect on content vc while left menu is opening
  * Default value is 0
  * @return CGFloat range of [0,1]

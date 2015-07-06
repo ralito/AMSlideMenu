@@ -266,6 +266,10 @@ static NSMutableArray *allInstances;
     return NO;
 }
 
+- (UIColor *)colorForDarknessOverlayWhileLeftMenu {
+    return [UIColor blackColor];
+}
+
 - (CGFloat)maxDarknessWhileLeftMenu
 {
     return 0;
@@ -294,7 +298,7 @@ static NSMutableArray *allInstances;
     [self.darknessView removeFromSuperview];
 
     self.darknessView = [[UIView alloc] initWithFrame:self.currentActiveNVC.view.bounds];
-    self.darknessView.backgroundColor = [UIColor blackColor];
+    self.darknessView.backgroundColor = [self colorForDarknessOverlayWhileLeftMenu];
 
     switch (self.menuState) {
         case AMSlideMenuClosed:
